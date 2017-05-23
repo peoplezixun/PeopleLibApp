@@ -1,0 +1,2980 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 25.2.2 rc1">
+
+    <issue
+        id="DefaultLocale"
+        severity="Warning"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead"
+        category="Correctness"
+        priority="6"
+        summary="Implied default locale in case conversion"
+        explanation="Calling `String#toLowerCase()` or `#toUpperCase()` *without specifying an explicit locale* is a common source of bugs. The reason for that is that those methods will use the current locale on the user&apos;s device, and even though the code appears to work correctly when you are developing the app, it will fail in some locales. For example, in the Turkish locale, the uppercase replacement for `i` is *not* `I`.
+
+If you want the methods to just perform ASCII replacement, for example to convert an enum name, call `String#toUpperCase(Locale.US)` instead. If you really want to use the current locale, call `String#toUpperCase(Locale.getDefault())` instead."
+        url="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        urls="http://developer.android.com/reference/java/util/Locale.html#default_locale"
+        errorLine1="     String name = plat.getName().toLowerCase();"
+        errorLine2="                                  ~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\java\cn\sharesdk\onekeyshare\themes\classic\PlatformPageAdapter.java"
+            line="187"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="OldTargetApi"
+        severity="Warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the `android.os.Build.VERSION_CODES` javadoc for details."
+        category="Correctness"
+        priority="6"
+        summary="Target SDK attribute is not targeting latest version"
+        explanation="When your application runs on a version of Android that is more recent than your `targetSdkVersion` specifies that it has been tested with, various compatibility modes kick in. This ensures that your application continues to work, but it may look out of place. For example, if the `targetSdkVersion` is less than 14, your app may get an option button in the UI.
+
+To fix this issue, set the `targetSdkVersion` to the highest available value. Then test your app to make sure everything works correctly. You may want to consult the compatibility notes to see what changes apply to each version you are adding support for: http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        url="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        urls="http://developer.android.com/reference/android/os/Build.VERSION_CODES.html"
+        errorLine1="        android:targetSdkVersion=&quot;17&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\AndroidManifest.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        severity="Warning"
+        message="A newer version of com.android.support:support-v4 than 25.2.0 is available: 25.3.1"
+        category="Correctness"
+        priority="4"
+        summary="Obsolete Gradle Dependency"
+        explanation="This detector looks for usages of libraries where the version you are using is not the current stable release. Using older versions is fine, and there are cases where you deliberately want to stick with an older version. However, you may simply not be aware that a more recent version is available, and that is what this lint check helps find."
+        errorLine1="    compile &quot;com.android.support:support-v4:${SUPPORT_LIB_VERSION}&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="studio">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\build.gradle"
+            line="30"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleOverrides"
+        severity="Warning"
+        message="This `versionCode` value (`1`) is not used; it is always overridden by the value specified in the Gradle build script (`1`)"
+        category="Correctness"
+        priority="4"
+        summary="Value overridden by Gradle build script"
+        explanation="The value of (for example) `minSdkVersion` is only used if it is not specified in the `build.gradle` build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity."
+        errorLine1="    android:versionCode=&quot;1&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\AndroidManifest.xml"
+            line="3"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleOverrides"
+        severity="Warning"
+        message="This `versionName` value (`1.0`) is not used; it is always overridden by the value specified in the Gradle build script (`1.0`)"
+        category="Correctness"
+        priority="4"
+        summary="Value overridden by Gradle build script"
+        explanation="The value of (for example) `minSdkVersion` is only used if it is not specified in the `build.gradle` build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity."
+        errorLine1="    android:versionName=&quot;1.0&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\AndroidManifest.xml"
+            line="4"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="GradleOverrides"
+        severity="Warning"
+        message="This `minSdkVersion` value (`8`) is not used; it is always overridden by the value specified in the Gradle build script (`14`)"
+        category="Correctness"
+        priority="4"
+        summary="Value overridden by Gradle build script"
+        explanation="The value of (for example) `minSdkVersion` is only used if it is not specified in the `build.gradle` build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity."
+        errorLine1="        android:minSdkVersion=&quot;8&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\AndroidManifest.xml"
+            line="14"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="GradleOverrides"
+        severity="Warning"
+        message="This `targetSdkVersion` value (`17`) is not used; it is always overridden by the value specified in the Gradle build script (`25`)"
+        category="Correctness"
+        priority="4"
+        summary="Value overridden by Gradle build script"
+        explanation="The value of (for example) `minSdkVersion` is only used if it is not specified in the `build.gradle` build scripts. When specified in the Gradle build scripts, the manifest value is ignored and can be misleading, so should be removed to avoid ambiguity."
+        errorLine1="        android:targetSdkVersion=&quot;17&quot; />"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\AndroidManifest.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Fatal"
+        message="&quot;`ssdk_instapager_login_html`&quot; is not translated in &quot;en&quot; (English)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Incomplete translation"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.
+
+If the string should *not* be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.
+
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable `ANDROID_LINT_COMPLETE_REGIONS`.
+
+You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1="    &lt;string name=&quot;ssdk_instapager_login_html&quot; formatted=&quot;false&quot;>&lt;![CDATA["
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_instapaper_strings.xml"
+            line="4"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Fatal"
+        message="&quot;`ssdk_share_to_youtube`&quot; is not translated in &quot;en&quot; (English)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Incomplete translation"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.
+
+If the string should *not* be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.
+
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable `ANDROID_LINT_COMPLETE_REGIONS`.
+
+You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1=" &lt;string name=&quot;ssdk_share_to_youtube&quot;>分享到Youtube&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="80"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Fatal"
+        message="&quot;`ssdk_gender_male`&quot; is not translated in &quot;en&quot; (English)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Incomplete translation"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.
+
+If the string should *not* be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.
+
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable `ANDROID_LINT_COMPLETE_REGIONS`.
+
+You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1=" &lt;string name=&quot;ssdk_gender_male&quot;>男&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="82"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Fatal"
+        message="&quot;`ssdk_gender_female`&quot; is not translated in &quot;en&quot; (English)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Incomplete translation"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.
+
+If the string should *not* be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.
+
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable `ANDROID_LINT_COMPLETE_REGIONS`.
+
+You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1=" &lt;string name=&quot;ssdk_gender_female&quot;>女&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="83"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="MissingTranslation"
+        severity="Fatal"
+        message="&quot;`ssdk_symbol_ellipsis`&quot; is not translated in &quot;en&quot; (English)"
+        category="Correctness:Messages"
+        priority="8"
+        summary="Incomplete translation"
+        explanation="If an application has more than one locale, then all the strings declared in one language should also be translated in all other languages.
+
+If the string should *not* be translated, you can add the attribute `translatable=&quot;false&quot;` on the `&lt;string>` element, or you can define all your non-translatable strings in a resource file called `donottranslate.xml`. Or, you can ignore the issue with a `tools:ignore=&quot;MissingTranslation&quot;` attribute.
+
+By default this detector allows regions of a language to just provide a subset of the strings and fall back to the standard language strings. You can require all regions to provide a full translation by setting the environment variable `ANDROID_LINT_COMPLETE_REGIONS`.
+
+You can tell lint (and other tools) which language is the default language in your `res/values/` folder by specifying `tools:locale=&quot;languageCode&quot;` for the root `&lt;resources>` element in your resource file. (The `tools` prefix refers to the namespace declaration `http://schemas.android.com/tools`.)"
+        errorLine1=" &lt;string name=&quot;ssdk_symbol_ellipsis&quot;>...&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+        quickfix="adt">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="84"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="TrustAllX509TrustManager"
+        severity="Warning"
+        message="`checkClientTrusted` is empty, which could cause insecure network traffic due to trusting arbitrary TLS/SSL certificates presented by peers"
+        category="Security"
+        priority="6"
+        summary="Insecure TLS/SSL trust manager"
+        explanation="This check looks for X509TrustManager implementations whose `checkServerTrusted` or `checkClientTrusted` methods do nothing (thus trusting any certificate chain) which could result in insecure network traffic caused by trusting arbitrary TLS/SSL certificates presented by peers.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\com\mob\tools\network\NetworkHelper$SimpleX509TrustManager.class"/>
+    </issue>
+
+    <issue
+        id="DrawAllocation"
+        severity="Warning"
+        message="Avoid object allocations during draw/layout operations (preallocate and reuse instead)"
+        category="Performance"
+        priority="9"
+        summary="Memory allocations within drawing code"
+        explanation="You should avoid allocating objects during a drawing or layout operation. These are called frequently, so a smooth UI can be interrupted by garbage collection pauses caused by the object allocations.
+
+The way this is generally handled is to allocate the needed objects up front and to reuse them for each drawing operation.
+
+Some methods allocate memory on your behalf (such as `Bitmap.create`), and these should be handled in the same way."
+        errorLine1="  Paint paint = new Paint();"
+        errorLine2="                ~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\java\cn\sharesdk\onekeyshare\themes\classic\IndicatorView.java"
+            line="54"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="DrawAllocation"
+        severity="Warning"
+        message="Avoid object allocations during draw/layout operations (preallocate and reuse instead)"
+        category="Performance"
+        priority="9"
+        summary="Memory allocations within drawing code"
+        explanation="You should avoid allocating objects during a drawing or layout operation. These are called frequently, so a smooth UI can be interrupted by garbage collection pauses caused by the object allocations.
+
+The way this is generally handled is to allocate the needed objects up front and to reuse them for each drawing operation.
+
+Some methods allocate memory on your behalf (such as `Bitmap.create`), and these should be handled in the same way."
+        errorLine1="  Paint paint = new Paint();"
+        errorLine2="                ~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\java\cn\sharesdk\onekeyshare\themes\classic\XView.java"
+            line="32"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="DrawAllocation"
+        severity="Warning"
+        message="Avoid object allocations during draw/layout operations (preallocate and reuse instead)"
+        category="Performance"
+        priority="9"
+        summary="Memory allocations within drawing code"
+        explanation="You should avoid allocating objects during a drawing or layout operation. These are called frequently, so a smooth UI can be interrupted by garbage collection pauses caused by the object allocations.
+
+The way this is generally handled is to allocate the needed objects up front and to reuse them for each drawing operation.
+
+Some methods allocate memory on your behalf (such as `Bitmap.create`), and these should be handled in the same way."
+        errorLine1="  paint = new Paint();"
+        errorLine2="          ~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\java\cn\sharesdk\onekeyshare\themes\classic\XView.java"
+            line="37"
+            column="11"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_auth_title_back` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_auth_title_back.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_back_arr` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_back_arr.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_instapager_login_html` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_instapager_login_html&quot; formatted=&quot;false&quot;>&lt;![CDATA["
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_instapaper_strings.xml"
+            line="4"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_logo` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_logo.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_alipay` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_alipay.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_alipaymoments` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_alipaymoments.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_bluetooth` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_bluetooth.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_check_checked` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_check_checked.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_check_default` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_check_default.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_dingding` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_dingding.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_douban` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_douban.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_dropbox` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_dropbox.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_email` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_email.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_evernote` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_evernote.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_facebook` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_facebook.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_facebookmessenger` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_facebookmessenger.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_flickr` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_flickr.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_foursquare` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_foursquare.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_googleplus` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_googleplus.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_instagram` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_instagram.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_instapaper` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_instapaper.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_kaixin` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_kaixin.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_kakaostory` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_kakaostory.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_kakaotalk` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_kakaotalk.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_laiwang` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_laiwang.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_laiwangmoments` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_laiwangmoments.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_line` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_line.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_linkedin` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_linkedin.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_meipai` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_meipai.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_mingdao` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_mingdao.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_pinterest` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_pinterest.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_platform_cell_back` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot; >"
+        errorLine2="^">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable\ssdk_oks_classic_platform_cell_back.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_pocket` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_pocket.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_progressbar` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="&lt;rotate xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable\ssdk_oks_classic_progressbar.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_qq` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_qq.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_qzone` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_qzone.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_renren` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_renren.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_shortmessage` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_shortmessage.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_sinaweibo` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_sinaweibo.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_tencentweibo` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_tencentweibo.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_tumblr` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_tumblr.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_twitter` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_twitter.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_vkontakte` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_vkontakte.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_wechat` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_wechat.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_wechatfavorite` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_wechatfavorite.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_wechatmoments` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_wechatmoments.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_whatsapp` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_whatsapp.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_yixin` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_yixin.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_yixinmoments` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_yixinmoments.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_youdao` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_youdao.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_youtube` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_youtube.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_platfrom_cell_back_nor` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;drawable name=&quot;ssdk_oks_classic_platfrom_cell_back_nor&quot;>#ffffffff&lt;/drawable>"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_oks_color_drawables.xml"
+            line="3"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_classic_platfrom_cell_back_sel` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;drawable name=&quot;ssdk_oks_classic_platfrom_cell_back_sel&quot;>#ffeeeeee&lt;/drawable>"
+        errorLine2="              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_oks_color_drawables.xml"
+            line="4"
+            column="15"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_oks_ptr_ptr` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-hdpi\ssdk_oks_ptr_ptr.png"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_oks_share` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_oks_share&quot;>分享&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_oks_strings.xml"
+            line="3"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_oks_strings.xml"
+            line="3"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_oks_sharing` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_oks_sharing&quot;>分享操作正在后台进行…&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_oks_strings.xml"
+            line="4"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_oks_strings.xml"
+            line="4"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_oks_share_failed` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_oks_share_failed&quot;>分享失败&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_oks_strings.xml"
+            line="5"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_oks_strings.xml"
+            line="5"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_oks_share_completed` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_oks_share_completed&quot;>分享成功&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_oks_strings.xml"
+            line="6"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_oks_strings.xml"
+            line="6"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_oks_share_canceled` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_oks_share_canceled&quot;>分享已取消&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_oks_strings.xml"
+            line="7"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_oks_strings.xml"
+            line="7"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_oks_cancel` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_oks_cancel&quot;>取消&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_oks_strings.xml"
+            line="8"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_oks_strings.xml"
+            line="8"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_oks_multi_share` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_oks_multi_share&quot;>图文分享&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_oks_strings.xml"
+            line="9"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_oks_strings.xml"
+            line="9"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_oks_confirm` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_oks_confirm&quot;>确定&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_oks_strings.xml"
+            line="10"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_oks_strings.xml"
+            line="10"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_oks_contacts` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_oks_contacts&quot;>联系人&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_oks_strings.xml"
+            line="11"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_oks_strings.xml"
+            line="11"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_oks_pull_to_refresh` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_oks_pull_to_refresh&quot;>下拉刷新&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_oks_strings.xml"
+            line="12"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_oks_strings.xml"
+            line="12"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_oks_release_to_refresh` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_oks_release_to_refresh&quot;>松开刷新&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_oks_strings.xml"
+            line="13"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_oks_strings.xml"
+            line="13"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_oks_refreshing` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_oks_refreshing&quot;>刷新中…&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_oks_strings.xml"
+            line="14"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_oks_strings.xml"
+            line="14"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_weibo_oauth_regiseter` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_weibo_oauth_regiseter&quot;>应用授权&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="3"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="3"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_website` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_website&quot;>http://www.mob.com&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="4"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="4"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_weibo_upload_content` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_weibo_upload_content&quot;>分享图片&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="5"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="5"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_wechat_client_inavailable` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_wechat_client_inavailable&quot;>目前您的微信版本过低或未安装微信，需要安装微信才能使用&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="6"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="6"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_google_plus_client_inavailable` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_google_plus_client_inavailable&quot;>Google+ 版本过低或者没有安装，需要升级或安装Google+才能使用！&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="7"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="7"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_qq_client_inavailable` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_qq_client_inavailable&quot;>QQ 版本过低或者没有安装，需要升级或安装QQ才能使用！&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="8"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="8"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_pinterest_client_inavailable` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_pinterest_client_inavailable&quot;>Pinterest版本过低或者没有安装，需要升级或安装Pinterest才能使用！&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="9"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="9"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_instagram_client_inavailable` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_instagram_client_inavailable&quot;>Instagram版本过低或者没有安装，需要升级或安装Instagram才能使用！&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="10"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="10"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_yixin_client_inavailable` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_yixin_client_inavailable&quot;>目前您的易信版本过低或未安装，需要安装易信才能使用&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="11"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="11"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_line_client_inavailable` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_line_client_inavailable&quot;>目前您的Line版本过低或未安装，需要安装Line才能使用&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="12"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="12"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_kakaotalk_client_inavailable` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_kakaotalk_client_inavailable&quot;>目前您的KakaoTalk版本过低或未安装，需要安装KakaoTalk才能使用&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="13"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="13"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_kakaostory_client_inavailable` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_kakaostory_client_inavailable&quot;>目前您的KakaoStory版本过低或未安装，需要安装KakaoStory才能使用&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="14"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="14"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_whatsapp_client_inavailable` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_whatsapp_client_inavailable&quot;>目前您的WhatsApp版本过低或未安装，需要安装WhatsApp才能使用&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="15"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="15"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_laiwang_client_inavailable` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_laiwang_client_inavailable&quot;>目前您的来往版本过低或未安装，需要安装来往才能使用&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="16"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="16"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_alipay_client_inavailable` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_alipay_client_inavailable&quot;>目前您的支付宝版本过低或未安装，需要安装支付宝才能使用&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="17"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="17"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_facebookmessenger_client_inavailable` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_facebookmessenger_client_inavailable&quot;>目前您的FacebookMessenger版本过低或未安装，需要安装才能使用&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="18"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="18"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_sinaweibo` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_sinaweibo&quot;>新浪微博&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="20"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="20"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_tencentweibo` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_tencentweibo&quot;>腾讯微博&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="21"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="21"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_qzone` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_qzone&quot;>QQ空间&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="22"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="22"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_wechat` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_wechat&quot;>微信好友&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="23"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="23"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_wechatmoments` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_wechatmoments&quot;>微信朋友圈&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="24"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="24"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_wechatfavorite` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_wechatfavorite&quot;>微信收藏&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="25"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="25"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_facebook` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_facebook&quot;>Facebook&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="26"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="26"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_twitter` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_twitter&quot;>Twitter&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="27"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="27"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_renren` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_renren&quot;>人人网&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="28"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="28"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_kaixin` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_kaixin&quot;>开心网&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="29"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="29"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_email` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_email&quot;>邮件&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="30"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="30"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_shortmessage` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_shortmessage&quot;>信息&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="31"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="31"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_sohumicroblog` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_sohumicroblog&quot;>搜狐微博&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="32"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="32"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_sohusuishenkan` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_sohusuishenkan&quot;>搜狐随身看&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="33"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="41"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_neteasemicroblog` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_neteasemicroblog&quot;>网易微博&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="34"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="33"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_douban` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_douban&quot;>豆瓣&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="35"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="34"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_youdao` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_youdao&quot;>有道云笔记&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="36"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="35"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_evernote` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_evernote&quot;>印象笔记&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="37"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="36"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_linkedin` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_linkedin&quot;>领英&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="38"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="37"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_googleplus` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_googleplus&quot;>Google+&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="39"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="38"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_foursquare` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_foursquare&quot;>FourSquare&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="40"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="39"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_qq` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_qq&quot;>QQ&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="41"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="40"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_pinterest` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_pinterest&quot;>Pinterest&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="42"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="42"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_flickr` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_flickr&quot;>Flickr&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="43"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="43"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_tumblr` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_tumblr&quot;>Tumblr&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="44"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="44"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_dropbox` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_dropbox&quot;>Dropbox&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="45"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="45"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_vkontakte` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_vkontakte&quot;>VK&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="46"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="46"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_instagram` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_instagram&quot;>Instagram&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="47"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="47"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_yixin` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_yixin&quot;>易信&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="48"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="48"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_yixinmoments` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_yixinmoments&quot;>易信朋友圈&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="49"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="49"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_mingdao` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_mingdao&quot;>明道&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="50"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="50"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_kakaotalk` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_kakaotalk&quot;>KakaoTalk&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="51"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="51"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_kakaostory` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_kakaostory&quot;>KakaoStory&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="52"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="52"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_line` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_line&quot;>Line&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="53"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="53"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_bluetooth` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_bluetooth&quot;>蓝牙&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="54"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="54"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_whatsapp` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_whatsapp&quot;>WhatsApp&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="55"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="55"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_pocket` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_pocket&quot;>Pocket&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="56"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="56"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_instapaper` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_instapaper&quot;>Instapaper&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="57"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="57"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_instapaper_email` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_instapaper_email&quot;>邮箱&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="58"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="58"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_instapaper_pwd` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_instapaper_pwd&quot;>密码&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="59"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="59"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_instapaper_login` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_instapaper_login&quot;>登录&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="60"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="60"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_instapaper_logining` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_instapaper_logining&quot;>登录中…&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="61"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="61"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_instapager_email_or_password_incorrect` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_instapager_email_or_password_incorrect&quot;>Email或密码不正确&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="62"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="62"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_facebookmessenger` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_facebookmessenger&quot;>Facebook Messenger&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="63"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="63"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_laiwang` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_laiwang&quot;>来往&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="64"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="64"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_laiwangmoments` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_laiwangmoments&quot;>来往动态&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="65"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="65"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_alipay` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_alipay&quot;>支付宝好友&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="66"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="66"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_alipaymoments` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_alipaymoments&quot;>支付宝生活圈&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="67"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="67"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_plurk` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_plurk&quot;>Plurk&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="68"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="68"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_youtube` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_youtube&quot;>Youtube&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="69"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="71"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_dingding` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1="    &lt;string name=&quot;ssdk_dingding&quot;>钉钉&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="70"
+            column="13"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="69"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_meipai` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_meipai&quot;>美拍&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="71"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="70"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_share_to_qzone` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_share_to_qzone&quot;>分享到QQ空间&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="72"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="73"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_share_to_qq` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_share_to_qq&quot;>分享到QQ&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="73"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="74"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_share_to_facebook` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_share_to_facebook&quot;>分享到Facebook&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="74"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="76"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_mingdao_share_content` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_mingdao_share_content&quot;>网页分享&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="75"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="77"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_share_to_mingdao` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_share_to_mingdao&quot;>分享到明道&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="76"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="78"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_share_to_googleplus` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_share_to_googleplus&quot;>分享到Google+&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="77"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="75"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_share_to_qzone_default` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_share_to_qzone_default&quot;>来自%s的分享&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="78"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="79"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_use_login_button` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_use_login_button&quot;>请改用“登录”按钮&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="79"
+            column="10"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values-en\ssdk_strings.xml"
+            line="80"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_share_to_youtube` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_share_to_youtube&quot;>分享到Youtube&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="80"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_gender_male` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_gender_male&quot;>男&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="82"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_gender_female` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_gender_female&quot;>女&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="83"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.string.ssdk_symbol_ellipsis` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds."
+        errorLine1=" &lt;string name=&quot;ssdk_symbol_ellipsis&quot;>...&lt;/string>"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="84"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.drawable.ssdk_title_div` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_title_div.png"/>
+    </issue>
+
+    <issue
+        id="TypographyEllipsis"
+        severity="Warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?"
+        category="Usability:Typography"
+        priority="5"
+        summary="Ellipsis string can be replaced with ellipsis character"
+        explanation="You can replace the string &quot;...&quot; with a dedicated ellipsis character, ellipsis character (…, &amp;#8230;). This can help make the text more readable."
+        url="http://en.wikipedia.org/wiki/Ellipsis"
+        urls="http://en.wikipedia.org/wiki/Ellipsis"
+        errorLine1=" &lt;string name=&quot;ssdk_symbol_ellipsis&quot;>...&lt;/string>"
+        errorLine2="                                     ^"
+        quickfix="studio,adt">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\values\ssdk_strings.xml"
+            line="84"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        severity="Warning"
+        message="Missing the following drawables in `drawable-hdpi`: ssdk_auth_title_back.png, ssdk_back_arr.png, ssdk_logo.png, ssdk_oks_classic_alipay.png, ssdk_oks_classic_alipaymoments.png... (44 more)"
+        category="Usability:Icons"
+        priority="4"
+        summary="Icon densities validation"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies icons which do not have complete coverage across the densities.
+
+Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-hdpi"/>
+    </issue>
+
+    <issue
+        id="IconDensities"
+        severity="Warning"
+        message="Missing the following drawables in `drawable-xhdpi`: ssdk_oks_ptr_ptr.png (found in drawable-hdpi)"
+        category="Usability:Icons"
+        priority="4"
+        summary="Icon densities validation"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra high). This lint check identifies icons which do not have complete coverage across the densities.
+
+Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi"/>
+    </issue>
+
+    <issue
+        id="IconDuplicates"
+        severity="Warning"
+        message="The following unrelated icon files have identical contents: ssdk_oks_classic_alipay.png, ssdk_oks_classic_alipaymoments.png"
+        category="Usability:Icons"
+        priority="3"
+        summary="Duplicated icons under different names"
+        explanation="If an icon is repeated under different names, you can consolidate and just use one of the icons and delete the others to make your application smaller. However, duplicated icons usually are not intentional and can sometimes point to icons that were accidentally overwritten or accidentally not updated.">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_alipaymoments.png"/>
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res\drawable-xhdpi\ssdk_oks_classic_alipay.png"/>
+    </issue>
+
+    <issue
+        id="IconMissingDensityFolder"
+        severity="Warning"
+        message="Missing density variation folders in `src\main\res`: drawable-mdpi, drawable-xxhdpi, drawable-xxxhdpi"
+        category="Usability:Icons"
+        priority="3"
+        summary="Missing density folder"
+        explanation="Icons will look best if a custom version is provided for each of the major screen density classes (low, medium, high, extra-high, extra-extra-high). This lint check identifies folders which are missing, such as `drawable-hdpi`.
+
+Low density is not really used much anymore, so this check ignores the ldpi density. To force lint to include it, set the environment variable `ANDROID_LINT_INCLUDE_LDPI=true`. For more information on current density usage, see http://developer.android.com/resources/dashboard/screens.html"
+        url="http://developer.android.com/guide/practices/screens_support.html"
+        urls="http://developer.android.com/guide/practices/screens_support.html">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\res"/>
+    </issue>
+
+    <issue
+        id="ViewConstructor"
+        severity="Warning"
+        message="Custom view `FriendListItem` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`"
+        category="Usability"
+        priority="3"
+        summary="Missing View constructors for XML inflation"
+        explanation="Some layout tools (such as the Android layout editor) need to find a constructor with one of the following signatures:
+* `View(Context context)`
+* `View(Context context, AttributeSet attrs)`
+* `View(Context context, AttributeSet attrs, int defStyle)`
+
+If your custom view needs to perform initialization which does not apply when used in a layout editor, you can surround the given code with a check to see if `View#isInEditMode()` is false, since that method will return `false` at runtime but true within a user interface editor."
+        errorLine1="public class FriendListItem extends LinearLayout {"
+        errorLine2="             ~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\java\cn\sharesdk\onekeyshare\themes\classic\FriendListItem.java"
+            line="26"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        severity="Warning"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        category="Internationalization"
+        priority="6"
+        summary="TextView Internationalization"
+        explanation="When calling `TextView#setText`
+* Never call `Number#toString()` to format numbers; it will not handle fraction separators and locale-specific digits properly. Consider using `String#format` with proper format specifications (`%d` or `%f`) instead.
+* Do not pass a string literal (e.g. &quot;Hello&quot;) to display text. Hardcoded text can not be properly translated to other languages. Consider using Android resource strings instead.
+* Do not build messages by concatenating text chunks. Such messages can not be properly translated."
+        url="http://developer.android.com/guide/topics/resources/localization.html"
+        urls="http://developer.android.com/guide/topics/resources/localization.html"
+        errorLine1="   tvConfirm.setText(confirm + &quot;(&quot; + checkNum + &quot;)&quot;);"
+        errorLine2="                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\java\cn\sharesdk\onekeyshare\themes\classic\FriendListPage.java"
+            line="196"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        severity="Warning"
+        message="Use &quot;`Gravity.END`&quot; instead of &quot;`Gravity.RIGHT`&quot; to ensure correct behavior in right-to-left locales"
+        category="Internationalization:Bidirectional Text"
+        priority="5"
+        summary="Using left/right instead of start/end attributes"
+        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.
+
+For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.
+
+(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
+        errorLine1="  tvTextCouter.setGravity(Gravity.BOTTOM | Gravity.RIGHT);"
+        errorLine2="                                                   ~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\java\cn\sharesdk\onekeyshare\themes\classic\land\EditPageLand.java"
+            line="203"
+            column="52"/>
+    </issue>
+
+    <issue
+        id="RtlHardcoded"
+        severity="Warning"
+        message="Use &quot;`Gravity.END`&quot; instead of &quot;`Gravity.RIGHT`&quot; to ensure correct behavior in right-to-left locales"
+        category="Internationalization:Bidirectional Text"
+        priority="5"
+        summary="Using left/right instead of start/end attributes"
+        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.
+
+For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. *NOTE*: If your `minSdkVersion` is less than 17, you should add *both* the older left/right attributes *as well as* the new start/right attributes. On older platforms, where RTL is not supported and the start/right attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.
+
+(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
+        errorLine1="  tvTextCouter.setGravity(Gravity.BOTTOM | Gravity.RIGHT);"
+        errorLine2="                                                   ~~~~~">
+        <location
+            file="D:\AndroidStudioresponse\PeopleLibApp\oneKeyShare\src\main\java\cn\sharesdk\onekeyshare\themes\classic\port\EditPagePort.java"
+            line="200"
+            column="52"/>
+    </issue>
+
+</issues>

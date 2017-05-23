@@ -1,0 +1,1814 @@
+[
+    {
+        "outputFile": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 81,
+                    "endOffset": 132
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_oks_color_drawables.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 81,
+                        "endOffset": 134
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 137,
+                    "endColumn": 81,
+                    "endOffset": 214
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_oks_color_drawables.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 140,
+                        "endColumn": 81,
+                        "endOffset": 217
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 219,
+                    "endColumn": 45,
+                    "endOffset": 260
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 65,
+                        "startColumn": 4,
+                        "startOffset": 3726,
+                        "endColumn": 45,
+                        "endOffset": 3767
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 265,
+                    "endColumn": 86,
+                    "endOffset": 347
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 1295,
+                        "endColumn": 86,
+                        "endOffset": 1377
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 352,
+                    "endColumn": 53,
+                    "endOffset": 401
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 66,
+                        "startColumn": 4,
+                        "startOffset": 3773,
+                        "endColumn": 53,
+                        "endOffset": 3822
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 406,
+                    "endColumn": 45,
+                    "endOffset": 447
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 53,
+                        "startColumn": 1,
+                        "startOffset": 3073,
+                        "endColumn": 42,
+                        "endOffset": 3114
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 452,
+                    "endColumn": 44,
+                    "endOffset": 492
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 69,
+                        "startColumn": 4,
+                        "startOffset": 3921,
+                        "endColumn": 44,
+                        "endOffset": 3961
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 497,
+                    "endColumn": 42,
+                    "endOffset": 535
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 34,
+                        "startColumn": 1,
+                        "startOffset": 2200,
+                        "endColumn": 39,
+                        "endOffset": 2238
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 540,
+                    "endColumn": 48,
+                    "endOffset": 584
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 44,
+                        "startColumn": 1,
+                        "startOffset": 2654,
+                        "endColumn": 45,
+                        "endOffset": 2698
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 589,
+                    "endColumn": 41,
+                    "endOffset": 626
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 29,
+                        "startColumn": 1,
+                        "startOffset": 1958,
+                        "endColumn": 38,
+                        "endOffset": 1995
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 631,
+                    "endColumn": 46,
+                    "endOffset": 673
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 36,
+                        "startColumn": 1,
+                        "startOffset": 2285,
+                        "endColumn": 43,
+                        "endOffset": 2327
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 678,
+                    "endColumn": 50,
+                    "endOffset": 724
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 1,
+                        "startOffset": 1778,
+                        "endColumn": 47,
+                        "endOffset": 1824
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 729,
+                    "endColumn": 69,
+                    "endOffset": 794
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 62,
+                        "startColumn": 4,
+                        "startOffset": 3556,
+                        "endColumn": 69,
+                        "endOffset": 3621
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 799,
+                    "endColumn": 108,
+                    "endOffset": 903
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 17,
+                        "startColumn": 4,
+                        "startOffset": 1383,
+                        "endColumn": 108,
+                        "endOffset": 1487
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 908,
+                    "endColumn": 46,
+                    "endOffset": 950
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 42,
+                        "startColumn": 1,
+                        "startOffset": 2564,
+                        "endColumn": 43,
+                        "endOffset": 2606
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 955,
+                    "endColumn": 54,
+                    "endOffset": 1005
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 1,
+                        "startOffset": 2423,
+                        "endColumn": 51,
+                        "endOffset": 2473
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1010,
+                    "endColumn": 48,
+                    "endOffset": 1054
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 82,
+                        "startColumn": 1,
+                        "startOffset": 4570,
+                        "endColumn": 45,
+                        "endOffset": 4614
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1059,
+                    "endColumn": 46,
+                    "endOffset": 1101
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 81,
+                        "startColumn": 1,
+                        "startOffset": 4525,
+                        "endColumn": 43,
+                        "endOffset": 4567
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1106,
+                    "endColumn": 102,
+                    "endOffset": 1204
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 327,
+                        "endColumn": 102,
+                        "endOffset": 425
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1209,
+                    "endColumn": 51,
+                    "endOffset": 1256
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 1,
+                        "startOffset": 2373,
+                        "endColumn": 48,
+                        "endOffset": 2420
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1261,
+                    "endColumn": 52,
+                    "endOffset": 1309
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 46,
+                        "startColumn": 1,
+                        "startOffset": 2745,
+                        "endColumn": 49,
+                        "endOffset": 2793
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1314,
+                    "endColumn": 103,
+                    "endOffset": 1413
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 621,
+                        "endColumn": 103,
+                        "endOffset": 720
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1418,
+                    "endColumn": 83,
+                    "endOffset": 1497
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 61,
+                        "startColumn": 1,
+                        "startOffset": 3471,
+                        "endColumn": 80,
+                        "endOffset": 3550
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 1502,
+                    "endLine": 90,
+                    "endColumn": 9,
+                    "endOffset": 3382
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_instapaper_strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 59,
+                        "endLine": 68,
+                        "endColumn": 12,
+                        "endOffset": 1938
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 91,
+                    "startColumn": 4,
+                    "startOffset": 3387,
+                    "endColumn": 54,
+                    "endOffset": 3437
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 56,
+                        "startColumn": 1,
+                        "startOffset": 3211,
+                        "endColumn": 51,
+                        "endOffset": 3261
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 92,
+                    "startColumn": 4,
+                    "startOffset": 3442,
+                    "endColumn": 52,
+                    "endOffset": 3490
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 57,
+                        "startColumn": 1,
+                        "startOffset": 3264,
+                        "endColumn": 49,
+                        "endOffset": 3312
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 93,
+                    "startColumn": 4,
+                    "startOffset": 3495,
+                    "endColumn": 52,
+                    "endOffset": 3543
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 59,
+                        "startColumn": 1,
+                        "startOffset": 3364,
+                        "endColumn": 49,
+                        "endOffset": 3412
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 94,
+                    "startColumn": 4,
+                    "startOffset": 3548,
+                    "endColumn": 57,
+                    "endOffset": 3601
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 60,
+                        "startColumn": 1,
+                        "startOffset": 3415,
+                        "endColumn": 54,
+                        "endOffset": 3468
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 95,
+                    "startColumn": 4,
+                    "startOffset": 3606,
+                    "endColumn": 50,
+                    "endOffset": 3652
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 58,
+                        "startColumn": 1,
+                        "startOffset": 3315,
+                        "endColumn": 47,
+                        "endOffset": 3361
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 96,
+                    "startColumn": 4,
+                    "startOffset": 3657,
+                    "endColumn": 43,
+                    "endOffset": 3696
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 28,
+                        "startColumn": 1,
+                        "startOffset": 1916,
+                        "endColumn": 40,
+                        "endOffset": 1955
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 97,
+                    "startColumn": 4,
+                    "startOffset": 3701,
+                    "endColumn": 54,
+                    "endOffset": 3751
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 51,
+                        "startColumn": 1,
+                        "startOffset": 2979,
+                        "endColumn": 51,
+                        "endOffset": 3029
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 98,
+                    "startColumn": 4,
+                    "startOffset": 3756,
+                    "endColumn": 104,
+                    "endOffset": 3856
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 1002,
+                        "endColumn": 104,
+                        "endOffset": 1102
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 99,
+                    "startColumn": 4,
+                    "startOffset": 3861,
+                    "endColumn": 52,
+                    "endOffset": 3909
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 50,
+                        "startColumn": 1,
+                        "startOffset": 2928,
+                        "endColumn": 49,
+                        "endOffset": 2976
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 100,
+                    "startColumn": 4,
+                    "startOffset": 3914,
+                    "endColumn": 101,
+                    "endOffset": 4011
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 899,
+                        "endColumn": 101,
+                        "endOffset": 996
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 101,
+                    "startColumn": 4,
+                    "startOffset": 4016,
+                    "endColumn": 43,
+                    "endOffset": 4055
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 63,
+                        "startColumn": 4,
+                        "startOffset": 3627,
+                        "endColumn": 43,
+                        "endOffset": 3666
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 102,
+                    "startColumn": 4,
+                    "startOffset": 4060,
+                    "endColumn": 85,
+                    "endOffset": 4141
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 1208,
+                        "endColumn": 85,
+                        "endOffset": 1289
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 103,
+                    "startColumn": 4,
+                    "startOffset": 4146,
+                    "endColumn": 52,
+                    "endOffset": 4194
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 64,
+                        "startColumn": 4,
+                        "startOffset": 3672,
+                        "endColumn": 52,
+                        "endOffset": 3720
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 104,
+                    "startColumn": 4,
+                    "startOffset": 4199,
+                    "endColumn": 42,
+                    "endOffset": 4237
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 52,
+                        "startColumn": 1,
+                        "startOffset": 3032,
+                        "endColumn": 39,
+                        "endOffset": 3070
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 105,
+                    "startColumn": 4,
+                    "startOffset": 4242,
+                    "endColumn": 86,
+                    "endOffset": 4324
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 811,
+                        "endColumn": 86,
+                        "endOffset": 893
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 106,
+                    "startColumn": 4,
+                    "startOffset": 4329,
+                    "endColumn": 44,
+                    "endOffset": 4369
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 37,
+                        "startColumn": 1,
+                        "startOffset": 2330,
+                        "endColumn": 41,
+                        "endOffset": 2370
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 107,
+                    "startColumn": 4,
+                    "startOffset": 4374,
+                    "endColumn": 42,
+                    "endOffset": 4412
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 70,
+                        "startColumn": 1,
+                        "startOffset": 3964,
+                        "endColumn": 39,
+                        "endOffset": 4002
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 108,
+                    "startColumn": 4,
+                    "startOffset": 4417,
+                    "endColumn": 43,
+                    "endOffset": 4456
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 49,
+                        "startColumn": 1,
+                        "startOffset": 2886,
+                        "endColumn": 40,
+                        "endOffset": 2925
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 109,
+                    "startColumn": 4,
+                    "startOffset": 4461,
+                    "endColumn": 59,
+                    "endOffset": 4516
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 74,
+                        "startColumn": 1,
+                        "startOffset": 4169,
+                        "endColumn": 56,
+                        "endOffset": 4224
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 110,
+                    "startColumn": 4,
+                    "startOffset": 4521,
+                    "endColumn": 54,
+                    "endOffset": 4571
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 33,
+                        "startColumn": 1,
+                        "startOffset": 2147,
+                        "endColumn": 51,
+                        "endOffset": 2197
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 111,
+                    "startColumn": 4,
+                    "startOffset": 4576,
+                    "endColumn": 46,
+                    "endOffset": 4618
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_oks_strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 336,
+                        "endColumn": 46,
+                        "endOffset": 378
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 112,
+                    "startColumn": 4,
+                    "startOffset": 4623,
+                    "endColumn": 47,
+                    "endOffset": 4666
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_oks_strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 439,
+                        "endColumn": 47,
+                        "endOffset": 482
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 113,
+                    "startColumn": 4,
+                    "startOffset": 4671,
+                    "endColumn": 49,
+                    "endOffset": 4716
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_oks_strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 488,
+                        "endColumn": 49,
+                        "endOffset": 533
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 114,
+                    "startColumn": 4,
+                    "startOffset": 4721,
+                    "endColumn": 53,
+                    "endOffset": 4770
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_oks_strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 384,
+                        "endColumn": 53,
+                        "endOffset": 433
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 115,
+                    "startColumn": 4,
+                    "startOffset": 4775,
+                    "endColumn": 57,
+                    "endOffset": 4828
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_oks_strings.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 4,
+                        "startOffset": 539,
+                        "endColumn": 57,
+                        "endOffset": 592
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 116,
+                    "startColumn": 4,
+                    "startOffset": 4833,
+                    "endColumn": 52,
+                    "endOffset": 4881
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_oks_strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 1,
+                        "startOffset": 654,
+                        "endColumn": 49,
+                        "endOffset": 702
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 117,
+                    "startColumn": 4,
+                    "startOffset": 4886,
+                    "endColumn": 60,
+                    "endOffset": 4942
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_oks_strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 1,
+                        "startOffset": 595,
+                        "endColumn": 57,
+                        "endOffset": 651
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 118,
+                    "startColumn": 4,
+                    "startOffset": 4947,
+                    "endColumn": 45,
+                    "endOffset": 4988
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_oks_strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 45,
+                        "endOffset": 98
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 119,
+                    "startColumn": 4,
+                    "startOffset": 4993,
+                    "endColumn": 57,
+                    "endOffset": 5046
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_oks_strings.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 277,
+                        "endColumn": 57,
+                        "endOffset": 330
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 120,
+                    "startColumn": 4,
+                    "startOffset": 5051,
+                    "endColumn": 57,
+                    "endOffset": 5104
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_oks_strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 218,
+                        "endColumn": 57,
+                        "endOffset": 271
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 121,
+                    "startColumn": 4,
+                    "startOffset": 5109,
+                    "endColumn": 54,
+                    "endOffset": 5159
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_oks_strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 162,
+                        "endColumn": 54,
+                        "endOffset": 212
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 122,
+                    "startColumn": 4,
+                    "startOffset": 5164,
+                    "endColumn": 56,
+                    "endOffset": 5216
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_oks_strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 104,
+                        "endColumn": 56,
+                        "endOffset": 156
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 123,
+                    "startColumn": 4,
+                    "startOffset": 5221,
+                    "endColumn": 52,
+                    "endOffset": 5269
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 41,
+                        "startColumn": 1,
+                        "startOffset": 2513,
+                        "endColumn": 49,
+                        "endOffset": 2561
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 124,
+                    "startColumn": 4,
+                    "startOffset": 5274,
+                    "endColumn": 103,
+                    "endOffset": 5373
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 516,
+                        "endColumn": 103,
+                        "endOffset": 615
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 125,
+                    "startColumn": 4,
+                    "startOffset": 5378,
+                    "endColumn": 44,
+                    "endOffset": 5418
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 67,
+                        "startColumn": 4,
+                        "startOffset": 3828,
+                        "endColumn": 44,
+                        "endOffset": 3868
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 126,
+                    "startColumn": 4,
+                    "startOffset": 5423,
+                    "endColumn": 46,
+                    "endOffset": 5465
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 55,
+                        "startColumn": 1,
+                        "startOffset": 3166,
+                        "endColumn": 43,
+                        "endOffset": 3208
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 127,
+                    "startColumn": 4,
+                    "startOffset": 5470,
+                    "endColumn": 38,
+                    "endOffset": 5504
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 1,
+                        "startOffset": 2476,
+                        "endColumn": 35,
+                        "endOffset": 2510
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 128,
+                    "startColumn": 4,
+                    "startOffset": 5509,
+                    "endColumn": 83,
+                    "endOffset": 5588
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 431,
+                        "endColumn": 83,
+                        "endOffset": 510
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 129,
+                    "startColumn": 4,
+                    "startOffset": 5593,
+                    "endColumn": 43,
+                    "endOffset": 5632
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 1,
+                        "startOffset": 1591,
+                        "endColumn": 40,
+                        "endOffset": 1630
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 130,
+                    "startColumn": 4,
+                    "startOffset": 5637,
+                    "endColumn": 43,
+                    "endOffset": 5676
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 27,
+                        "startColumn": 1,
+                        "startOffset": 1874,
+                        "endColumn": 40,
+                        "endOffset": 1913
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 131,
+                    "startColumn": 4,
+                    "startOffset": 5681,
+                    "endColumn": 62,
+                    "endOffset": 5739
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 73,
+                        "startColumn": 1,
+                        "startOffset": 4108,
+                        "endColumn": 59,
+                        "endOffset": 4166
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 132,
+                    "startColumn": 4,
+                    "startOffset": 5744,
+                    "endColumn": 63,
+                    "endOffset": 5803
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 76,
+                        "startColumn": 1,
+                        "startOffset": 4281,
+                        "endColumn": 60,
+                        "endOffset": 4340
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 133,
+                    "startColumn": 4,
+                    "startOffset": 5808,
+                    "endColumn": 55,
+                    "endOffset": 5859
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 75,
+                        "startColumn": 1,
+                        "startOffset": 4227,
+                        "endColumn": 52,
+                        "endOffset": 4278
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 134,
+                    "startColumn": 4,
+                    "startOffset": 5864,
+                    "endColumn": 50,
+                    "endOffset": 5910
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 72,
+                        "startColumn": 1,
+                        "startOffset": 4059,
+                        "endColumn": 47,
+                        "endOffset": 4105
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 135,
+                    "startColumn": 4,
+                    "startOffset": 5915,
+                    "endColumn": 55,
+                    "endOffset": 5966
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 71,
+                        "startColumn": 1,
+                        "startOffset": 4005,
+                        "endColumn": 52,
+                        "endOffset": 4056
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 136,
+                    "startColumn": 4,
+                    "startOffset": 5971,
+                    "endColumn": 63,
+                    "endOffset": 6030
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 77,
+                        "startColumn": 1,
+                        "startOffset": 4343,
+                        "endColumn": 60,
+                        "endOffset": 4402
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 137,
+                    "startColumn": 4,
+                    "startOffset": 6035,
+                    "endColumn": 60,
+                    "endOffset": 6091
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 79,
+                        "startColumn": 1,
+                        "startOffset": 4463,
+                        "endColumn": 57,
+                        "endOffset": 4519
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 138,
+                    "startColumn": 4,
+                    "startOffset": 6096,
+                    "endColumn": 48,
+                    "endOffset": 6140
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 30,
+                        "startColumn": 1,
+                        "startOffset": 1998,
+                        "endColumn": 45,
+                        "endOffset": 2042
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 139,
+                    "startColumn": 4,
+                    "startOffset": 6145,
+                    "endColumn": 47,
+                    "endOffset": 6188
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 1,
+                        "startOffset": 1496,
+                        "endColumn": 44,
+                        "endOffset": 1539
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 140,
+                    "startColumn": 4,
+                    "startOffset": 6193,
+                    "endColumn": 51,
+                    "endOffset": 6240
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 1,
+                        "startOffset": 2045,
+                        "endColumn": 48,
+                        "endOffset": 2092
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 141,
+                    "startColumn": 4,
+                    "startOffset": 6245,
+                    "endColumn": 53,
+                    "endOffset": 6294
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 32,
+                        "startColumn": 1,
+                        "startOffset": 2095,
+                        "endColumn": 50,
+                        "endOffset": 2144
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 142,
+                    "startColumn": 4,
+                    "startOffset": 6299,
+                    "endColumn": 52,
+                    "endOffset": 6347
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 83,
+                        "startColumn": 1,
+                        "startOffset": 4617,
+                        "endColumn": 49,
+                        "endOffset": 4665
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 143,
+                    "startColumn": 4,
+                    "startOffset": 6352,
+                    "endColumn": 50,
+                    "endOffset": 6398
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 1,
+                        "startOffset": 1542,
+                        "endColumn": 47,
+                        "endOffset": 1588
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 144,
+                    "startColumn": 4,
+                    "startOffset": 6403,
+                    "endColumn": 46,
+                    "endOffset": 6445
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 43,
+                        "startColumn": 1,
+                        "startOffset": 2609,
+                        "endColumn": 43,
+                        "endOffset": 2651
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 145,
+                    "startColumn": 4,
+                    "startOffset": 6450,
+                    "endColumn": 48,
+                    "endOffset": 6494
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 26,
+                        "startColumn": 1,
+                        "startOffset": 1827,
+                        "endColumn": 45,
+                        "endOffset": 1871
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 146,
+                    "startColumn": 4,
+                    "startOffset": 6499,
+                    "endColumn": 59,
+                    "endOffset": 6554
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 78,
+                        "startColumn": 1,
+                        "startOffset": 4405,
+                        "endColumn": 56,
+                        "endOffset": 4460
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 147,
+                    "startColumn": 4,
+                    "startOffset": 6559,
+                    "endColumn": 45,
+                    "endOffset": 6600
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 45,
+                        "startColumn": 1,
+                        "startOffset": 2701,
+                        "endColumn": 42,
+                        "endOffset": 2742
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 148,
+                    "startColumn": 4,
+                    "startOffset": 6605,
+                    "endColumn": 59,
+                    "endOffset": 6660
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 118,
+                        "endColumn": 59,
+                        "endOffset": 173
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 149,
+                    "startColumn": 4,
+                    "startOffset": 6665,
+                    "endColumn": 44,
+                    "endOffset": 6705
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 1,
+                        "startOffset": 1633,
+                        "endColumn": 41,
+                        "endOffset": 1673
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 150,
+                    "startColumn": 4,
+                    "startOffset": 6710,
+                    "endColumn": 86,
+                    "endOffset": 6792
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 239,
+                        "endColumn": 86,
+                        "endOffset": 321
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 151,
+                    "startColumn": 4,
+                    "startOffset": 6797,
+                    "endColumn": 52,
+                    "endOffset": 6845
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 1,
+                        "startOffset": 1727,
+                        "endColumn": 49,
+                        "endOffset": 1775
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 152,
+                    "startColumn": 4,
+                    "startOffset": 6850,
+                    "endColumn": 52,
+                    "endOffset": 6898
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 1,
+                        "startOffset": 1676,
+                        "endColumn": 49,
+                        "endOffset": 1724
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 153,
+                    "startColumn": 4,
+                    "startOffset": 6903,
+                    "endColumn": 59,
+                    "endOffset": 6958
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 59,
+                        "endOffset": 112
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 154,
+                    "startColumn": 4,
+                    "startOffset": 6963,
+                    "endColumn": 58,
+                    "endOffset": 7017
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 179,
+                        "endColumn": 58,
+                        "endOffset": 233
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 155,
+                    "startColumn": 4,
+                    "startOffset": 7022,
+                    "endColumn": 50,
+                    "endOffset": 7068
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 54,
+                        "startColumn": 1,
+                        "startOffset": 3117,
+                        "endColumn": 47,
+                        "endOffset": 3163
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 156,
+                    "startColumn": 4,
+                    "startOffset": 7073,
+                    "endColumn": 98,
+                    "endOffset": 7167
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 1108,
+                        "endColumn": 98,
+                        "endOffset": 1202
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 157,
+                    "startColumn": 4,
+                    "startOffset": 7172,
+                    "endColumn": 41,
+                    "endOffset": 7209
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 47,
+                        "startColumn": 1,
+                        "startOffset": 2796,
+                        "endColumn": 38,
+                        "endOffset": 2833
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 158,
+                    "startColumn": 4,
+                    "startOffset": 7214,
+                    "endColumn": 83,
+                    "endOffset": 7293
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 10,
+                        "startColumn": 4,
+                        "startOffset": 726,
+                        "endColumn": 83,
+                        "endOffset": 805
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 159,
+                    "startColumn": 4,
+                    "startOffset": 7298,
+                    "endColumn": 51,
+                    "endOffset": 7345
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 48,
+                        "startColumn": 1,
+                        "startOffset": 2836,
+                        "endColumn": 48,
+                        "endOffset": 2883
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 160,
+                    "startColumn": 4,
+                    "startOffset": 7350,
+                    "endColumn": 45,
+                    "endOffset": 7391
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 35,
+                        "startColumn": 1,
+                        "startOffset": 2241,
+                        "endColumn": 42,
+                        "endOffset": 2282
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 161,
+                    "startColumn": 4,
+                    "startOffset": 7396,
+                    "endColumn": 48,
+                    "endOffset": 7440
+                },
+                "from": {
+                    "file": "D:\\AndroidStudioresponse\\PeopleLibApp\\oneKeyShare\\src\\main\\res\\values\\ssdk_strings.xml",
+                    "position": {
+                        "startLine": 68,
+                        "startColumn": 1,
+                        "startOffset": 3871,
+                        "endColumn": 45,
+                        "endOffset": 3915
+                    }
+                }
+            }
+        ]
+    }
+]
